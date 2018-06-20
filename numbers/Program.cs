@@ -63,13 +63,13 @@ namespace NumbersInCSharp
             // use the suffix m or M, for example:
             // Without the suffix m, the number is treated as a double and
             // generates a compiler error.
-            decimal myMoney = 300.5m;
+            // decimal myMoney = 300.5m;
 
             // Conversions
             // The integral types are implicitly converted to
             // decimal and the result evaluates to decimal. Therefore you can
             // initialize a decimal variable using an integer literal.
-            decimal myMoney = 300;
+            // decimal myMoney = 300;
 
             // There is no implicit conversion between other floating-point types and the
             // decimal type; therefore, a cast must be used to convert between these two types.
@@ -90,7 +90,7 @@ namespace NumbersInCSharp
             double dub = 9;
             // The following line causes an error that reads "Operator '+' cannot be applied to
             // operands of type 'double' and 'decimal'"
-            Console.WriteLine(dec + dub);
+            // Console.WriteLine(dec + dub);
             // You can fix the error by using explicit casting of either operand.
             Console.WriteLine(dec + (decimal)dub);
             Console.WriteLine((double)dec + dub);
@@ -98,41 +98,39 @@ namespace NumbersInCSharp
             /* Decimal and Int */
             // In this example, a decimal and an int are mixed in the same
             // expression. The result evaluates to the decimal type.
-            public class TestDecimal
-            {
-                static void Main()
-                {
-                    decimal d = 9.1m;
-                    int y = 3;
-                    // Output: 12.1
-                    Console.WriteLine(d + y);   // Result converted to decimal
-                }
-            }
+            // public class TestDecimal
+            // {
+            //     static void Main()
+            //     {
+            //         decimal d = 9.1m;
+            //         int y = 3;
+            //         // Output: 12.1
+            //         Console.WriteLine(d + y);   // Result converted to decimal
+            //     }
+            // }
 
             // In this example, the output is formatted by using the currency
             // format string. Notice that x is rounded because the decimal places
             // exceed $0.99. The variable y, which represents the maximum exact
             // digits, is displayed exactly in the correct format.
-            public class TestDecimalFormat
-            {
-                static void Main()
-                {
-                    decimal x = 0.999m;
-                    decimal y = 9999999999999999999999999999m;
-                    Console.WriteLine("My amount = {0:C}", x);
-                    Console.WriteLine("Your amount = {0:C}", y);
-                }
-            }
+            // public class TestDecimalFormat
+            // {
+            //     static void Main()
+            //     {
+            //         decimal x = 0.999m;
+            //         decimal y = 9999999999999999999999999999m;
+            //         Console.WriteLine("My amount = {0:C}", x);
+            //         Console.WriteLine("Your amount = {0:C}", y);
+            //     }
+            // }
             /* Output:
                 My amount = $1.00
                 Your amount = $9,999,999,999,999,999,999,999,999,999.00
             */
 
-
-
             decimal min = decimal.MinValue;
             decimal max = decimal.MaxValue;
-            Console.WriteLine($"The range of the decimal type is {min} to {max}");
+            // Console.WriteLine($"The range of the decimal type is {min} to {max}");
         }
 
         static void Main(string[] args)
